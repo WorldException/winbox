@@ -36,7 +36,7 @@ plugs:
     target: $SNAP/data-dir/themes
 
 parts:
-  winbox:
+  winbox-clean:
     source: .
     plugin: dump
     stage:
@@ -52,15 +52,15 @@ parts:
         wget -O winbox32.exe "https://download.mikrotik.com/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox.exe"
         wget -O winbox64.exe "https://download.mikrotik.com/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox64.exe"
 
-        install -o root -D src/wrapper $SNAPCRAFT_PRIME/winbox
+        install -o root -D src/wrapper $SNAPCRAFT_PRIME/winbox-clean
         install -o root -D snap/gui/winbox.desktop $SNAPCRAFT_PRIME/winbox.desktop
         install -o root -D winbox32.exe $SNAPCRAFT_PRIME/usr/libexec/winbox32.exe
         install -o root -D winbox64.exe $SNAPCRAFT_PRIME/usr/libexec/winbox64.exe
         snapcraftctl set-version "${SNAPCRAFT_PROJECT_VERSION}+git"
 apps:
 
-  winbox:
-    command: winbox
+  winbox-clean:
+    command: winbox-clean
     autostart: winbox.desktop
     desktop: winbox.desktop
     environment:

@@ -24,7 +24,7 @@ Building
 
 To build the snap yourself, clone this github repo and run snapcraft in the top of the source tree:
 
-```
+```bash
 sudo snap install snapcraft --classic
 git clone https://github.com/panaceya/winbox.git
 cd winbox
