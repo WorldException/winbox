@@ -8,7 +8,7 @@ Snap package with winbox
 Installation
 ------------
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/winbox)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/winbox-clean)
 
 Run in terminal `sudo snap install winbox-clean`
 
