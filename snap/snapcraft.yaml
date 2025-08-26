@@ -1,5 +1,5 @@
 name: winbox-clean
-base: core18
+base: core20
 version: '3.42'
 summary: small utility that allows administration of MikroTik RouterOS
 icon: snap/gui/icon.png
