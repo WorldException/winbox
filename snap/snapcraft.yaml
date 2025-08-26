@@ -49,8 +49,8 @@ parts:
     prime:
       - -README*
     override-build: |
-        wget -O winbox32.exe "https://download.mikrotik.com/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox.exe"
-        wget -O winbox64.exe "https://download.mikrotik.com/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox64.exe"
+        wget -O winbox32.exe "https://download.mikrotik.com/routeros/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox.exe"
+        wget -O winbox64.exe "https://download.mikrotik.com/routeros/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox64.exe"
 
         install -o root -D src/wrapper $SNAPCRAFT_PRIME/winbox-clean
         install -o root -D snap/gui/winbox.desktop $SNAPCRAFT_PRIME/winbox.desktop
