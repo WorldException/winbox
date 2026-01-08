@@ -18,11 +18,11 @@ architectures:
     run-on: i386
 
 plugs:
-  wine-runtime:
+  wine-runtime-c20:
     interface: content
     target: $SNAP/wine-runtime
     default-provider: wine-platform-runtime
-  wine-5-stable:
+  wine-7-stable:
     interface: content
     target: $SNAP/wine-platform
     default-provider: wine-platform-5-stable
@@ -78,6 +78,6 @@ apps:
       - wayland
       - icon-themes
       - removable-media
-      - wine-runtime
-      - wine-5-stable
+      - wine-runtime-c20
+      - wine-7-stable
       - x11
