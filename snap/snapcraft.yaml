@@ -68,7 +68,8 @@ apps:
       HOME: $SNAP_USER_COMMON
       TMPDIR: $XDG_RUNTIME_DIR
       XDG_CURRENT_DESKTOP: Unity
-      DISABLE_WAYLAND: 1
+      DISABLE_WAYLAND: "1"
+      CRYPTOGRAPHY_OPENSSL_NO_LEGACY: "True"
     plugs:
       - desktop
       - home
