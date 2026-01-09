@@ -43,7 +43,7 @@ parts:
       - usr
     stage-packages:
       - libfreetype6
-
+      - libgtk-3-0
     build-packages:
       - wget
     prime:
@@ -51,14 +51,13 @@ parts:
     override-build: |
         wget -O winbox32.exe "https://download.mikrotik.com/routeros/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox.exe"
         wget -O winbox64.exe "https://download.mikrotik.com/routeros/winbox/${SNAPCRAFT_PROJECT_VERSION}/winbox64.exe"
-
         install -o root -D src/wrapper $SNAPCRAFT_PRIME/winbox-clean
         install -o root -D snap/gui/winbox.desktop $SNAPCRAFT_PRIME/winbox.desktop
         install -o root -D winbox32.exe $SNAPCRAFT_PRIME/usr/libexec/winbox32.exe
         install -o root -D winbox64.exe $SNAPCRAFT_PRIME/usr/libexec/winbox64.exe
         snapcraftctl set-version "${SNAPCRAFT_PROJECT_VERSION}+git"
-apps:
 
+apps:
   winbox-clean:
     command: winbox-clean
     autostart: winbox.desktop
@@ -81,3 +80,4 @@ apps:
       - wine-runtime-c20
       - wine-7-stable
       - x11
+      - gtk3
